@@ -23,12 +23,12 @@ public class FirebaseStorageService {
 	@PostConstruct
 	private void init() throws IOException {
 		if (FirebaseApp.getApps().isEmpty()) {
-			InputStream in = FirebaseStorageService.class.getResourceAsStream("/serviceAccountKey.json");
+			InputStream in = FirebaseStorageService.class.getResourceAsStream("/carros-2136a-firebase-adminsdk-3jlgb-e13755e848.json");
 
 			System.out.println(in);
 
 			FirebaseOptions options = new FirebaseOptions.Builder().setCredentials(GoogleCredentials.fromStream(in))
-					.setStorageBucket("carros-3a13e.appspot.com").setDatabaseUrl("https://carros-3a13e.firebaseio.com")
+					.setStorageBucket("carros-2136a.appspot.com").setDatabaseUrl("https://carros-2136a.firebaseio.com")
 					.build();
 
 			FirebaseApp.initializeApp(options);
